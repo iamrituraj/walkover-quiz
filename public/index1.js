@@ -6,7 +6,7 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
 function handleLoginSubmit(event) {
 
     
-        var element = document.getElementById("contactForm");
+     var element = document.getElementById("contactForm");
     var name = element.name.value;
     var email = element.email.value;
     event.preventDefault();
