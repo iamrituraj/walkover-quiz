@@ -1,0 +1,8 @@
+@media screen and (max-width: 768px){ 
+body .bgimage{
+    width: 80vw;
+    height: 45vh;
+    background-size: contain;
+    
+}
+}

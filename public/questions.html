@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Walkover</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    html {
+      height: 100%;
+    }
+
+    p {
+      text-align: center;
+      font-size: 20px;
+      margin-top: 0px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-header p-3 bg-info text-white">
+    <h2>
+      Walkover University
+    </h2>
+  </div>
+
+  <div class="mx-0 mt-5 row d-flex justify-content-center align-content-center main_container">
+    <div class="col-xl-8 col-lg-10 col-12">
+      <div>
+        <p>
+          <button id="timer" class="btn btn-danger text-white font-weight-bold"></button>
+        </p>
+      </div>
+
+      <div>
+        <h4 id="question"></h4>
+      </div>
+
+      <div class="my-3">
+        <div class="radio">
+          <input type="radio" name="optradio" value="1" class="mr-2"><label class="OptionsText"></label>
+        </div>
+        <div class="radio">
+          <input type="radio" name="optradio" value="2" class="mr-2"><label class="OptionsText"></label>
+        </div>
+        <div class="radio">
+          <input type="radio" name="optradio" value="3" class="mr-2"><label class="OptionsText"></label>
+        </div>
+        <div class="radio">
+          <input type="radio" name="optradio" value="4" class="mr-2"><label class="OptionsText"></label>
+        </div>
+      </div>
+
+      <div class="mt-3 my-2 d-flex justify-content-center">
+        <button class="btn bg-primary text-white px-4 py-2 font-weight-bold" onclick="nextQuestion()">Next</button>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title d-inline">Quiz Complete</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+              <h5 class="text-center" id="finalMessage"></h5>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="reloadPage()">OK</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="mcq_JS.js"></script>
+
+</body>
+
+</html>
