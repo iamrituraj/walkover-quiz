@@ -18,6 +18,8 @@ const database1 = new Datastore('database1.db');
 database.loadDatabase();
 database1.loadDatabase();
 
+const port = process.env.PORT
+
 
 // var questionPool = [{
 //             question: "The default value of a static integer variable of a class in Java is,",
@@ -528,6 +530,6 @@ app.get('/rankings', (request, response) => {
 // });
 
 
-app.listen(4821, () => {
-    console.log('server started on http://localhost:4821')
+app.listen(port, () => {
+    console.log(`server started on ${port}`)
 })
