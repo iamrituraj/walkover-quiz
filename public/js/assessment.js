@@ -16,7 +16,7 @@ var resultCont = document.getElementById("result");
 let questions;
 
 async function data_request() {
-    const response = await fetch('http://localhost:4821/api');
+    const response = await fetch('/api');
     let json = await response.json();
     set_question(json);
 
