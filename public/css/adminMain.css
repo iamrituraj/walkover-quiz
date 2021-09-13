@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed&family=Mirza:wght@500&display=swap');
+
+* {
+    font-family: 'IBM Plex Sans Condensed',
+        sans-serif;
+    font-family: 'Mirza',
+        cursive;
+}
+
+
 body{
 
 display: flex;
@@ -29,6 +39,7 @@ img {
     background-color: rgba(100, 95, 95, 0.486);
     margin-left: 2vw;
     padding: 2vh;
+    border-radius: 10px;
 }
 
 

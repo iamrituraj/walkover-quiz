@@ -2,13 +2,11 @@ let table = document.querySelector("table");
 let json;
 
 function set_data(data) {
-    console.log(data)
     json = data;
     show_table(json);
 }
 
 function show_table(json) {
-    console.log(json);
 
     let table = document.createElement('table');
     let thead = document.createElement('thead');
@@ -45,7 +43,6 @@ function show_table(json) {
     thead.appendChild(row_1);
 
     let index = 0,s_no = 1;
-    console.log(json.length)
     length = json.length;
 
     while (index < length) {
@@ -89,14 +86,10 @@ function compare(a, b) {
 }
 
 async function data_request() {
-    const response = await fetch('http://localhost:4821/rankings');
-    console.log(response);
+    const response = await fetch('/rankings');
     let json = await response.json();
-    console.log(json);
     let json2 = json.sort(compare);
-    console.log(json2)
     set_data(json2);
 };
-
 
 data_request();

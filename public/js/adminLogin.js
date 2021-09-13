@@ -9,7 +9,6 @@ async function email_send(email) {
     const data = {
         email
     };
-    console.log(data);
 
     const options = {
         method: 'POST',
@@ -23,7 +22,6 @@ async function email_send(email) {
 
     const response = await fetch('/otp', options);
     const json = await response.json();
-    console.log(json);
     otp_set(json)
 
 }
@@ -36,28 +34,23 @@ function input_change() {
 }
 
 function otp_check(user_otp) {
-    console.log(correctotp.otp)
     if (user_otp == correctotp.otp) {
         window.location.href = '/adminMainPage.html'
     }
 }
 
 function handleLoginSubmit(event) {
-    console.log(event.target)
     let element = document.getElementById('admin_email');
     email = element.value;
     event.preventDefault();
-    console.log(email)
     email_send(email);
 }
 
 
 function handleOtpSubmit(event) {
-    console.log(event.target)
     let element = document.getElementById('admin_otp');
     otp = element.value;
     event.preventDefault();
-    console.log(otp)
     otp_check(otp);
 }
 

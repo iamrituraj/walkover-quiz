@@ -1,14 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Glory&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed&family=Mirza:wght@500&display=swap');
 
 * {
-    margin: 0;
+    box-sizing: border-box;
     padding: 0;
-    box-sizing:border-box;
+    margin: 0;
+    font-family: 'IBM Plex Sans Condensed',
+        sans-serif;
+    font-family: 'Mirza',
+        cursive;
 }
 
 body {
-    background:cornflowerblue;
+    background: cornflowerblue;
     width: 100vw;
     height: 100vh;
 
@@ -51,9 +54,9 @@ body {
     font-size: 1.8em;
     font-family: 'Glory',
         sans-serif;
-        position: relative;
-        right: 100px;
-        top: 5px;
+    position: relative;
+    right: 100px;
+    top: 5px;
 }
 
 #question-container {
@@ -84,14 +87,14 @@ input {
     padding: 0.5em;
     width: 25px;
     height: 25px;
-    
+
 }
 
 
-label{
-    color:rgb(101, 32, 167);
+label {
+    color: rgb(101, 32, 167);
     font-size: 20px;
-} 
+}
 
 .radio {
     margin: 0.1em;
@@ -105,7 +108,7 @@ label{
     text-align: center;
 }
 
-a{
+a {
     text-decoration: none;
     color: white;
 }
@@ -126,49 +129,49 @@ button {
 
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 1150px) {
-#main-container{
-    width: 90%;
-}
+    #main-container {
+        width: 90%;
+    }
 
-#question-container{
-    width: 100%;
-}
+    #question-container {
+        width: 100%;
+    }
 
-#question {
-    width: 100%;
-}
+    #question {
+        width: 100%;
+    }
 
-label {
-    font-size: 19px;
-}
-}
-
-
-@media only screen and (min-device-width: 375px) and (max-device-width: 760px) {
-body{
-    width: 100vw;
-    height: 100vh;
-}
-
-
-#main-container {
-    width: 700px;
-    margin-left: 10%;
-}
+    label {
+        font-size: 19px;
+    }
 }
 
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 760px) {
+    body {
+        width: 100vw;
+        height: 100vh;
+    }
 
-#main-container {
-    width:600px;
-    margin-left: 20%;
+
+    #main-container {
+        width: 700px;
+        margin-left: 10%;
+    }
 }
 
 
-#time-container {
-    width: 80%;
-}
+@media only screen and (min-device-width: 375px) and (max-device-width: 760px) {
+
+    #main-container {
+        width: 600px;
+        margin-left: 20%;
+    }
+
+
+    #time-container {
+        width: 80%;
+    }
 
 }
 

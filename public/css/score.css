@@ -1,12 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Glory&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed&family=Mirza:wght@500&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
-
+    padding: 0;
+    margin: 0;
+    font-family: 'IBM Plex Sans Condensed',
+        sans-serif;
+    font-family: 'Mirza',
+        cursive;
 }
+
 
 body {
     background: url("../img/background1.png") no-repeat center;
@@ -15,7 +18,6 @@ body {
 }
 
 #container {
-    /* background: mediumslateblue; */
     width: 100vw;
     height: 100vh;
     display: flex;

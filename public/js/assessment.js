@@ -1,7 +1,6 @@
 var currentQuestion = 0;
 var score = 0;
 var totalQuestions = 10;
-console.log(totalQuestions);
 
 var container = document.getElementById("quizContainer");
 var questionEl = document.getElementById("question");
@@ -18,9 +17,7 @@ let questions;
 
 async function data_request() {
     const response = await fetch('http://localhost:4821/api');
-    console.log(response);
     let json = await response.json();
-    console.log(json);
     set_question(json);
 
 };
@@ -29,14 +26,11 @@ let timer = 180;
 
 function interval() {
     let countdown = setInterval(() => {
-        // console.log('start');
         document.getElementById("time-container").innerHTML = "Time Left:" + timer + "s ";
         timer--;
-        // console.log("star" + timer)
         if (timer < 0) {
             clearInterval(countdown);
             window.location.href = "http://localhost:4821/result";
-            // window.location.replace("http://localhost:4821/result.html");
         }
     }, 1000);
 }
@@ -66,7 +60,7 @@ function loadNextQuestion() {
         alert("Please select your answer!");
         return;
     }
-    //Comparing the answer value, if true add 10 to the score
+    //Comparing the answer value, if true add 1 to the score
     var answer = selectedOption.value;
     if (questions[currentQuestion].correctIndex == answer) {
         score += 1;
@@ -75,7 +69,6 @@ function loadNextQuestion() {
 
     // saves score to session storage
     sessionStorage.setItem("score", score);
-    console.log('score' + score);
 
     //Uncheck the current option, increment currentQuestion and load next question
     selectedOption.checked = false;
@@ -93,24 +86,7 @@ function loadNextQuestion() {
         button.appendChild(tag);
         
     }
-    //Hide the container to reveal the score after final question
-    if (currentQuestion == totalQuestions) {
-        // var tag = document.createElement("a");
-        // tag.id = 'submit';
-        // tag.href = "score.html"
-        // var link = document.createTextNode("submit");
-        // nextButton.textContent = "";
-
-        // // Append the text node to anchor element.
-        // tag.appendChild(link);
-        // let button = document.getElementById("nextButton");
-        // button.appendChild(tag);
-
-        // container.style.display = "none";
-        // resultCont.style.display = "";
-        // resultCont.textContent = `Your Score: ${score}/100`;
-        return;
-    }
+    
 
     loadQuestion(currentQuestion);
 }

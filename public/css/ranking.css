@@ -1,8 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed&family=Mirza:wght@500&display=swap');
+
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'IBM Plex Sans Condensed',
+        sans-serif;
+    font-family: 'Mirza',
+        cursive;
 }
+
 
 #container {
     background: url(https://img.freepik.com/free-photo/background-texture-printed-question-marks_124595-213.jpg?size=626&ext=jpg);

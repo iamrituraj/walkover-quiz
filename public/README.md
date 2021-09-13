@@ -18,9 +18,7 @@ WalkOver University final assesment project.
 * Bootstrap
 
 ## Deployment
-The project is hosted on Github pages, link: https://whozzat-anshul.github.io/MCQ-Quiz/ .
 
 ## Project Setup
-1. Clone the repository by typing ```git clone https://github.com/whozzat-anshul/MCQ-Quiz.git``` in command prompt.
 2. Download and install Google Chrome in your system.
 3. Open the index.html in Chrome.

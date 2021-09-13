@@ -13,8 +13,6 @@
          correctindex
      };
 
-     console.log(data);
-
      const options = {
          method: 'POST',
          headers: {
@@ -24,15 +22,12 @@
      };
 
      const response = await fetch('/add_questions', options);
-     console.log('data')
      const json = await response.json();
-     console.log(json);
 
  }
 
 
  function handleLoginSubmit(event) {
-     console.log(event.target + "here");
      event.preventDefault();
 
      let question = document.getElementById('question').value;
@@ -51,7 +46,6 @@
      Array.from(forms)
          .forEach(function (form) {
              form.addEventListener('submit', function (e) {
-                 console.log('iam')
                  handleLoginSubmit(e)
              });
          });
