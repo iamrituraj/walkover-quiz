@@ -75,7 +75,7 @@ For Deployment, we have used glitch as a paltform.
 
 ## Project Setup: 
 
-**Requirements:** Pre-installed `VS code` with `Node js` and `MongoDB`.
+**Requirements:** Pre-installed `VS code` with `Node js`.
 
 1. Clone this repository in your local machine using the following command:
 
